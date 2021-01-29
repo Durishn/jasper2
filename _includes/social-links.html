@@ -1,0 +1,79 @@
+<div class="social-links">
+    
+    <!-- Website -->
+    {% if site.website %}
+        <!-- <a class="social-link" rel="noopener" target="_blank" aria-label="Website" href="https://{{ site.website }}">
+            <span class="fa fa-globe"></span>
+        </a> -->
+    {% endif %}
+
+    <!-- Email -->
+    {% if site.email %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="Mail" href="mailto:{{ site.email }}">
+        <span class="fa fa-envelope"></span>
+    </a>
+    {% endif %}
+
+    <!-- LinkedIn -->
+    {% if site.linkedin %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="LinkedIn"
+        href="http://linkedin.com/in/{{ site.linkedin }}">
+        <span class="fab fa-linkedin"></span>
+    </a>
+    {% endif %}
+
+    <!-- Twitter -->
+    {% if site.twitter %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="Twitter"
+        href="https://twitter.com/{{ site.twitter }}">
+        <span class="fab fa-twitter"></span>
+    </a>
+    {% endif %}
+    
+    <!-- Facebook -->
+    {% if site.facebook %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="Facebook"
+        href="https://facebook.com/{{ site.facebook }}">
+        <span class="fab fa-facebook"></span>
+    </a>
+    {% endif %}
+
+    <!-- Instagram -->
+    {% if site.instagram %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="Instagram"
+        href="https://instagram.com/{{ site.instagram }}">
+        <span class="fab fa-instagram"></span>
+    </a>
+    {% endif %}
+
+    <!-- Couchsurfing -->
+    {% if site.couchsurfing %}
+        <a rel="noopener" target="_blank" aria-label="CouchSurfing" href="https://couchsurfing.com/people/{{ site.couchsurfing }}">
+            <span class="fas fa-couch"></span>
+        </a>
+    {% endif %}
+
+    <!-- Spotify -->
+    {% if site.spotify %}
+        <a rel="noopener" target="_blank" aria-label="Spotify" href="https://open.spotify.com/user/{{ site.spotify }}">
+            <span class="fab fa-spotify"></span>
+        </a>
+    {% endif %}
+
+    <!-- Youtube -->
+    {% if site.youtube %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="Youtube"
+        href="https://www.youtube.com/user/{{ site.youtube }}">
+        <span class="fab fa-youtube"></span>
+    </a>
+    {% endif %}
+
+    <!-- GitHub -->
+    {% if site.github %}
+    <a class="social-link" rel="noopener" target="_blank" aria-label="GitHub"
+        href="https://github.com/{{ site.github }}">
+        <span class="fab fa-github"></span>
+    </a>
+    {% endif %}
+
+</div>

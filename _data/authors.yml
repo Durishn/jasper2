@@ -1,0 +1,12 @@
+nic:
+  username: nic
+  name: Nic Durish
+  location: Guelph, Ontario
+  url_full: "https://nicdurish.ca"
+  # url: nicdurish.ca
+  bio: Guelph-based computer scientist. </br> Web and Automation tinkering addict. <br/>Crappy musician <br/>Mango connoisseur
+  picture: img/dusty@0.5x.png
+  # facebook: 
+  # twitter: durishn
+  # linkedin: nicdurish
+  cover: img/blog-cover.jpg
