@@ -1,112 +1,145 @@
-## Jasper2
-
-[![Build Status](https://travis-ci.org/jekyller/jasper2.svg?branch=master)](https://travis-ci.org/jekyller/jasper2)
-[![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
-
-This is a full-featured port of Ghost's default theme [Casper](https://github.com/tryghost/casper)
-*v2.1.9* for [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/).
-
-## Live Demo
-
-[Ghost's Casper](https://demo.ghost.io) // [Jasper2](https://jekyller.github.io/jasper2)
-
-![home page](https://raw.githubusercontent.com/jekyller/jasper2/master/assets/screenshot-desktop.jpg)
+![Project State][stable-shield]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-## Features
 
-* Out of the box support for multiple authors (via `_data/authors.yml`)
-* Full author information including: picture, bio, website, twitter, facebook, etc.
-* Tag description(s) and personalised covers (via `_data/tags.yml`)
-* Related posts view at the bottom of each post
-* All Ghost default pages: Author page(s), Tag page(s), About page(s), 404, etc.
-* Pagination (infinite scrolling or standard pagination, i.e. posts across multiple pages)
-* Atom Feeds by [Jekyll-feed](https://github.com/jekyll/jekyll-feed)
-* Toggleable subscribe button (requires an external service)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/)
-* Support for Google Analytics tracking
-* Support for Disqus comments (not Ghost standard)
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/Durishn/nicdurish.ca-blog">
+    <img src="img/favicon.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h2 align="center">Nic's Blog</h2>
+
+  <p align="center">
+    A personal blog, using a customized Jasper2 theme, running Jekyll, hosted through Netlify!
+    <br />
+    <a href="https://github.com/Durishn/nicdurish.ca-blog/wiki"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href='https://www.buymeacoffee.com/nicdurish' target='_blank' style='margin-top:50px;'><img height='30' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee' /></a>
+    <br />
+    <br/ >
+    <a href="https://blog.nicdurish.ca">View Demo</a>
+    ·
+    <a href="https://github.com/Durishn/nicdurish.ca-blog/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Durishn/nicdurish.ca-blog/issues">Request Feature</a>
+  </p>
+</p>
 
 
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#authors">Authors</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This is the codebase for my personal blog, available at https://blog.nicdurish.ca. It's built using a customized version of the [Jasper2](https://github.com/jekyller/jasper2) Theme using [Jekyll](https://jekyllrb.com/), and continuously built and deployed through [Netlify](https://netlify.com/). 
+
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-### Deployment
+To get a local copy up and running follow these simple steps.
 
-**Important:**  For security reasons, Github does not allow plugins (under `_plugins/`) when
-deploying with Github Pages. This means that we have to do one of the following:
+Before using this software, ensure you have the necessary prerequisites by running:
+  ```sh
+  npm install npm@latest -g
+  ```
 
-**1)** generate the site locally (more details below) and push the resulting
-HTML (the contents of `_site/` or `../jasper2-pages/`) to a Github repository, that GitHub Pages
-then host;
+Then get a clone this directory using:
+   ```sh
+   git clone https://github.com/Durishn/nicdurish.ca-blog.git
+   ```
 
-**2)** build the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
-This later approach is the one I am currently using to generate the live demo.
+Finally install the necessary packages using
+   ```sh
+   npm install
+   ```
 
-**3)** deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
+Changes to styling must be updating using 
+   ```sh
+   gulp
+   ```
 
-For option **1)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper2-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyller/jasper2/tree/gh-pages)).
+Finally the project can either be served using
+ ```sh
+ bundle exec jekyll serve
+ ```
 
-For option **2)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
-
-### Author Pages
-
-In order to properly generate author pages you need to rename the field *author* in the
-front matter of every post to match that of your each author's *username* as defined
-in the *[\_data/authors.yml](_data/authors.yml)* file.
-With the latest update, multiple author blogs are now supported out of the box.
-
-### Compiling Styles
-
-Following on the way Casper styles are compiled as [described here](https://github.com/tryghost/casper#development):
-
-Jasper2 styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
-
-```bash
-$ npm install
-$ gulp
+or built using
+```sh
+bundle exec jekyll build
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
 
-## Issues and Contributing
+<!-- ROADMAP -->
+## Roadmap
 
-This install builds well with Ruby v2.5.1 and Jekyll v3.7.4. If you run into any problems
-please log them on the [issue tracker](https://github.com/jekyller/jasper2/issues).
-
-Feel free pull-request your patches and fixes.
-
-## Thanks
+See the [open issues](https://github.com/Durishn/nicdurish.ca-blog/issues) for a list of proposed features (and known issues).
 
 
-Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
-that help keeping the project alive and updated :smile:
 
 
-## Copyright & License
+<!-- Authors -->
+## Authors
+Nic Durish - [@Durishn](https://twitter.com/Durishn) - [mail@nicdurish.ca](mailto:mail@nicdurish.ca)
 
-Same licence as the one provided by Ghost's team. See Casper's theme [license](GHOST.txt).
 
-Copyright (C) 2015-2018 - Released under the MIT License.
+<!-- LICENSE -->
+## License
+Distributed under the MIT License. See [`LICENSE`][license-url] for more information. This is the same license as the one provided by [Jekyller](licenses/jekyller.txt) and by [Ghost](licenses/GHOST.txt) before them. MAY THE OPEN SOURCE TRAIN KEEP ROLLING!!!🚂
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Jasper2](https://github.com/jekyller/jasper2)
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+
+[stable-shield]: https://img.shields.io/badge/stability-stable-green.svg
+[unstable-shield]: https://img.shields.io/badge/stability-unstable-yellow.svg
+[deprecated-shield]: https://img.shields.io/badge/stability-deprecated-orange.svg
+[experimental-shield]: https://img.shields.io/badge/stability-experimental-red.svg
+
+[contributors-shield]: https://img.shields.io/github/contributors/Durishn/nicdurish.ca-blog.svg
+[contributors-url]: https://github.com/Durishn/nicdurish.ca-blog/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Durishn/nicdurish.ca-blog.svg
+[forks-url]: https://github.com/Durishn/nicdurish.ca-blog/network/members
+[stars-shield]: https://img.shields.io/github/stars/Durishn/nicdurish.ca-blog.svg
+[stars-url]: https://github.com/Durishn/nicdurish.ca-blog/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Durishn/nicdurish.ca-blog.svg
+[issues-url]: https://github.com/Durishn/nicdurish.ca-blog/issues
+[license-shield]: https://img.shields.io/github/license/Durishn/nicdurish.ca-blog.svg
+[license-url]: https://github.com/Durishn/nicdurish.ca-blog/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-Github-black.svg?logo=github&colorB=555
+[linkedin-url]: https://github.com/Durishn
+[product-screenshot]: docs/images/screenshot.png
