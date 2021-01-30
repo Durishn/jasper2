@@ -66,7 +66,7 @@
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
                 </section>
                 <nav class="site-footer-nav">
-                    <!-- <a href="{{ site.baseurl }}">Latest Posts</a> -->
+                    <!-- <a href="{{ relative_url }}">Latest Posts</a> -->
                     <a href="https://{{ site.website }}" target="_blank" rel="noopener">To Main Site ⤻</a>
                 </nav>
             </div>
@@ -80,7 +80,7 @@
             <a class="subscribe-overlay-close" href="#"></a>
             <div class="subscribe-overlay-content">
                 {% if site.logo %}
-                    <img class="subscribe-overlay-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
+                    <img class="subscribe-overlay-logo" src="{{ relative_url }}{{ site.logo }}" alt="{{ site.title }}" />
                 {% endif %}
                 <h1 class="subscribe-overlay-title">Subscribe to {{ site.title }}</h1>
                 <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
@@ -103,7 +103,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="{{ relative_url }}assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
 
 
@@ -112,14 +112,14 @@
     <!-- <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script> -->
+    <script src="{{ relative_url }}assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
 
     {% if paginator.total_pages > site.paginate %}
     <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script>
+    <script src="{{ relative_url }}assets/js/infinitescroll.js"></script>
     {% endif %}
 
 
