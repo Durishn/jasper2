@@ -698,7 +698,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .kg-card-markdown {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     max-width: 920px;
@@ -734,7 +734,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     line-height: 1.5em; */
 }
 
-.kg-card-markdown p {
+.kg-card-markdown p, .kg-card-markdown li {
     font-size: 0.9em;
 }
 
@@ -812,7 +812,20 @@ Usage (In Ghost editor):
 .post-full-content blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    /* border-left: #3eb0ef 3px solid; */
+    border-left: none;
+    position: relative;
+}
+
+.post-full-content blockquote:before{
+    content: '\201C';
+    position: absolute;
+    top: 0.15em;
+    left: 0;
+    color: #000;
+    font-size: 6em;
+    z-index: 0;
+    opacity: 0.1;
 }
 
 .post-full-content blockquote p {
@@ -893,7 +906,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content h1 {
-    margin: 0.5em 0 0.2em 0;
+    margin: 1em 0 0.5em 0;
     font-size: 4.6rem;
     font-weight: 700;
 }
@@ -904,7 +917,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content h2 {
-    margin: 0.5em 0 0.2em 0;
+    margin: 1em 0 0.5em 0;
     font-size: 3.6rem;
     font-weight: 700;
 }
@@ -915,7 +928,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content h3 {
-    margin: 0.5em 0 0.2em 0;
+    margin: 0.8em 0 0.4em 0;
     font-size: 2.8rem;
     font-weight: 700;
 }
@@ -1770,6 +1783,15 @@ Alerts
 margin-bottom: 0;
 }
 
+.post-img-cap{
+    margin: 0 0 1.5em;
+    position: relative;
+    top: -1em;  
+}
+
+.post-img-fig{
+    margin: 0 2em;
+}
 
 /* 10. Subscribe Overlay
 /* ---------------------------------------------------------- */
@@ -1997,5 +2019,8 @@ margin-bottom: 0;
     }
     .site-footer-nav a:first-child {
         margin-left: 0;
+    }
+    .kg-card-markdown{
+        display: flex;
     }
 }
