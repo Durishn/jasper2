@@ -59,7 +59,7 @@ into the {body} of the default.hbs template -->
                         {% if page.noticelink %}
                         - <a rel="noopener" target="_blank" aria-label="Found Here" href="{{ page.noticelink }}">Found Here</a>
                         {% endif %}</p>
-                </div>
+                </div><br>
                 {% endif %}
                 <div class="kg-card-markdown">
                     {{ content }}
@@ -129,12 +129,6 @@ into the {body} of the default.hbs template -->
 </main>
 
 <!-- Links to Previous/Next posts -->
-        <script>
-            $(".alert-close").click(function () {
-                $("#alert").addClass("displaynone");
-            });
-        </script>
-        
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
