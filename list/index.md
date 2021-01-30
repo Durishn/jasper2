@@ -6,7 +6,7 @@ description: "My living list of living"
 navigation: true
 class: page-template
 subclass: 'post page thelist'
-cover: /img/thelist.jpg
+cover: img/thelist.jpg
 
 permalink: /list/
 sitemap:
