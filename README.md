@@ -15,22 +15,14 @@
     <img src="img/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h2 align="center">Nic's Blog</h2>
+  <h2 align="center"><a href="https://blog.nicdurish.ca">Nic's Blog</a></h2>
 
   <p align="center">
     A personal blog, using a customized Jasper2 theme, running Jekyll, hosted through Netlify!
     <br />
-    <a href="https://github.com/Durishn/nicdurish.ca-blog/wiki"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href='https://www.buymeacoffee.com/nicdurish' target='_blank' style='margin-top:50px;'><img height='30' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee' /></a>
-    <br />
-    <br/ >
-    <a href="https://blog.nicdurish.ca">View Demo</a>
-    ·
-    <a href="https://github.com/Durishn/nicdurish.ca-blog/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Durishn/nicdurish.ca-blog/issues">Request Feature</a>
+
   </p>
 </p>
 
@@ -56,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is the codebase for my personal blog, available at https://blog.nicdurish.ca. It's built using a customized version of the [Jasper2](https://github.com/jekyller/jasper2) Theme using [Jekyll](https://jekyllrb.com/), and continuously built and deployed through [Netlify](https://netlify.com/). 
+This is the codebase for my personal blog, available at https://blog.nicdurish.ca. It's built using a customized version of the [Jasper2](https://github.com/jekyller/jasper2) Theme using [Jekyll](https://jekyllrb.com/), and continuously built and deployed through [Netlify](https://netlify.com/). Feel free to use and modify this code as you please.
 
 
 <!-- GETTING STARTED -->
